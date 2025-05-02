@@ -773,6 +773,7 @@ body {
     width: 100%;
     /* border: 1px solid green; */
     display: flex;
+    justify-content: center;
     gap: 11px;
     /* border-radius: 20px; */
     color: white;
@@ -883,4 +884,14 @@ body {
     background-color: #292829;
     color: white;
     border: none;
+    cursor: pointer;
+}
+.query:hover{
+    background-color: #464747;
+}
+.cross{
+    display: none;
+}
+.add{
+    display: block;
 }
