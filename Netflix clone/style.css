@@ -859,3 +859,28 @@ body {
         justify-self: end;
     }
 }
+#queries{
+    width: 79vw;
+    margin:0 auto;
+    border: 1px solid white;display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.qBox{
+    width:100%;
+ border: 1px solid green;
+ display: flex;   
+ flex-direction: column;
+ gap: 10px;
+}
+.query{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    font-size: 25px;
+    background-color: #292829;
+    color: white;
+    border: none;
+}
