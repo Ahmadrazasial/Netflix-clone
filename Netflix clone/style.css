@@ -300,10 +300,11 @@ body {
 
 
 @media screen and (max-width:500px) {
+
     #banner {
-        width: 98vw;
+        width: 100vw;
         height: 470px;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         margin: 0;
     }
 
@@ -590,7 +591,7 @@ body {
 
 .heading h2 {
     color:white;
-    font-size: 32px;
+    font-size: 24px;
     font-family: sans-serif;
     margin:0 0 20px ;
 }
@@ -709,7 +710,7 @@ body {
 
 
     .heading h2 {
-        font-size: 20px;
+        font-size: 18px;
         font-family: sans-serif;
         margin: 0 0 20px;
     }
@@ -732,7 +733,7 @@ body {
     }
 
     .heading  h2{
-        font-size: 22px;
+        font-size: 18px;
         font-family: sans-serif;
     }
 
@@ -805,6 +806,7 @@ body {
 @media screen and (max-width:500px) {
     #features {
         width: 90vw;
+        margin: 0 auto;
         /* margin-top: 40px; */
     }
 
@@ -869,10 +871,10 @@ body {
 }
 .qBox{
     width:100%;
- border: 1px solid green;
+ /* border: 1px solid green; */
  display: flex;   
  flex-direction: column;
- gap: 10px;
+ /* gap: 10px; */
 }
 .query{
     width: 100%;
@@ -885,6 +887,10 @@ body {
     color: white;
     border: none;
     cursor: pointer;
+    margin-top: 10px;
+}
+.query:first-of-type{
+    margin-top: 0;
 }
 .query:hover{
     background-color: #464747;
@@ -894,4 +900,34 @@ body {
 }
 .add{
     display: block;
+}
+.queryAns{
+    width: 100%;
+    /* border: 1px solid orange; */
+    color: white;
+    font-family: sans-serif;
+    /* padding: 24px ; */
+    background-color: #2D2D2D;
+    font-size: 23px;
+}
+
+.queryAns p{
+    margin: 24px;
+}
+@media screen and (max-width:960px) {
+    #queries{
+        width: 87vw;
+    }
+.query{
+    width: 100%;
+    font-size: 18px;
+}
+.add{
+    width: 20px;
+}
+.queryAns{
+    width: 100%;
+    font-size: 18px;
+    margin: 0;
+}
 }
