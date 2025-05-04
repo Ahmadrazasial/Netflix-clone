@@ -142,29 +142,42 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    z-index: 3;
-
-
+    /* z-index: 3; */
+    max-width:0%;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateX(100%);
+    transition: max-width .5s ease,opacity .5s ease, transform .5s ease ;
 }
 
 #deva {
-    z-index: 2;
+    max-width:0%;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateX(100%);
     background: url(images/deva.jpeg);
     background-position: top right;
     background-size: cover;
     background-repeat: no-repeat;
-    transition: translate() 5s ease-in-out;
+    /* transition: translate() 5s ease-in-out; */
 
 }
 
 #wrestle {
-    z-index: 1;
+    max-width:0%;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateX(100%);
     background: url(images/download\ \(1\).jpeg) no-repeat;
     background-size: cover;
     background-position: top center;
 }
 
-
+.display{
+    max-width: 100%;
+    opacity: 1;
+    transform: translateX(0%);
+}
 
 .content {
     width: 70%;
@@ -627,19 +640,21 @@ body {
 #left1 {
     top: 40%;
     left: 0%;
-    z-index: 1;
+    display: none;
+    /* z-index: 1; */
 }
 
 .box .number {
     position: absolute;
-    top: 0%;
-    left: -20%;
+    top: 5%;
+    left: -15%;
     font-size: 75px;
     padding: 0;
     margin: 0;
     font-family: sans-serif;
     /* border: 1px solid blue; */
     font-weight: bold;
+    color: white;
     /* outline:1px solid white; */
 }
 
@@ -724,6 +739,7 @@ body {
 
     .box .number {
         font-size: 50px;
+        color: white;
     }
 }
 
@@ -900,19 +916,32 @@ body {
 }
 .add{
     display: block;
+    transition: transform .5s ease;
+}
+.rotate{
+    transform: rotateZ(-.125turn);
 }
 .queryAns{
     width: 100%;
-    /* border: 1px solid orange; */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10%);
+    transition: max-height .5s ease,opacity .5s ease,transform .5s ease;
     color: white;
     font-family: sans-serif;
-    /* padding: 24px ; */
     background-color: #2D2D2D;
     font-size: 23px;
+    
 }
 
 .queryAns p{
     margin: 24px;
+}
+.show{
+    max-height: 200px;
+    transform: translateY(0%);
+    opacity: 1;
 }
 @media screen and (max-width:960px) {
     #queries{
