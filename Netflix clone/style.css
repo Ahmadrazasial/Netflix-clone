@@ -212,12 +212,12 @@ body {
     font-weight: 500;
 }
 
-.content form {
+.form{
     width: 100%;
 
 }
 
-.content form input {
+.form input {
     width: 300px;
     height: 60px;
     border-radius: 30px;
@@ -225,11 +225,12 @@ body {
     color: white;
     padding: 0 10px;
     font-size: 20px;
-    border: none;
+    border: 1px solid white;
     opacity: .9;
+    margin-right: 8px;
 }
 
-.content form .button {
+.form .button {
     width: 200px;
     height: 60px;
     border-radius: 30px;
@@ -241,11 +242,11 @@ body {
     border: none;
 }
 
-.content form button:hover {
+.form button:hover {
     background-color: #C11119;
 }
 
-.content form p {
+ .form p {
     color: white;
     font-size: 1em;
     margin: 10px 0;
@@ -881,7 +882,8 @@ body {
 #queries{
     width: 79vw;
     margin:0 auto;
-    border: 1px solid white;display: flex;
+    /* border: 1px solid white; */
+    display: flex;
     flex-direction: column;
     margin-top: 40px;
 }
@@ -945,7 +947,7 @@ body {
 }
 @media screen and (max-width:960px) {
     #queries{
-        width: 87vw;
+        width: 90vw;
     }
 .query{
     width: 100%;
@@ -960,3 +962,99 @@ body {
     margin: 0;
 }
 }
+#form{
+    width: 79vw;
+    /* border: 1px solid white; */
+    margin: 0 auto;
+    display: flex;
+     justify-content: center;
+align-items: center; 
+margin-top: 60px;
+}
+.form1{
+    width: 80%;
+    /* border: 1px solid green; */
+    text-align: center;
+}
+.form1 #mail{
+    width: 500px;
+    height: 60px;
+}
+.form1 .button{
+    width: 200px;
+    height: 63px;
+    /* border-radius: ; */
+
+}
+.form1 p{
+    font-size: 18px;
+    font-family: sans-serif;
+    margin-bottom: 15px;
+}
+@media screen and (max-width:700px) {
+#form{
+    width: 90vw ;
+}
+.form1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 15px;
+}
+  .form1 #mail{
+    width: 94.5%;
+  }  
+  .form1 .button{
+    width: 100%;
+  }
+  .form1 p{
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width:701px) and (max-width:810px){
+    #form{
+        width: 90vw;
+     }
+        .form1{
+        width: 100%;
+        text-align: center;
+     } 
+     .form1 #mail{
+        width: 400px;
+     }  
+     .form1 .button{
+        width: 180px;
+     }  
+}
+@media screen and (min-width:811px) and (max-width:960px){
+ #form{
+    width: 90vw;
+ }
+    .form1{
+    width: 100%;
+    text-align: center;
+ } 
+ .form1 #mail{
+    width: 480px;
+ }  
+ .form1 .button{
+    width: 180px;
+ }
+}
+@media screen and (min-width:961px) and (max-width:1200px){
+    #form{
+       width: 79vw;
+    }
+       .form1{
+       width: 100%;
+       text-align: center;
+    } 
+    .form1 #mail{
+       width: 500px;
+    }  
+    .form1 .button{
+       width: 180px;
+    }
+   }
