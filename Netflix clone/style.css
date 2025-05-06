@@ -214,25 +214,52 @@ body {
 
 .form{
     width: 100%;
+    display: flex;
+    /* justify-content: center; */
 
 }
 
-.form input {
+.form .emailBox{
     width: 300px;
-    height: 60px;
     border-radius: 30px;
     background-color: #464747;
     color: white;
-    padding: 0 10px;
-    font-size: 20px;
+    padding: 24px 20px 8px;
     border: 1px solid white;
     opacity: .9;
     margin-right: 8px;
+    /* margin-bottom: -25px; */
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
 }
-
+.emailBox input{
+    width: 100%;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: white;
+}
+.emailBox input:focus{
+    border: 0px;
+    outline: none;
+}
+.emailBox label{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 18px;
+    transition: .2s ease all;
+    pointer-events: none;
+}
+.emailBox input:focus + label,.emailBox:not(:placeholder-shown) + label{
+    top: 10px;
+    font-size: 12px;
+}
 .form .button {
     width: 200px;
-    height: 60px;
+    /* height: 60px; */
+    padding: 16px 10px;
     border-radius: 30px;
     font-size: 25px;
     background-color: red;
@@ -246,7 +273,7 @@ body {
     background-color: #C11119;
 }
 
- .form p {
+ .content p {
     color: white;
     font-size: 1em;
     margin: 10px 0;
@@ -367,7 +394,7 @@ body {
         font-weight: 500;
     }
 
-    .content form {
+    .content .form {
         width: 90%;
         display: flex;
         flex-direction: column;
@@ -380,16 +407,16 @@ body {
         font-size: .8em;
     }
 
-    .content form input {
-        width: 93%;
-        height: 50px;
+    .content .form .emailBox {
+        width: 86%;
+        /* height: 50px; */
         background-color: #464747;
 
     }
 
     .content form .button {
         width: 100%;
-        height: 50px;
+        /* height: 50px; */
         border-radius: 30px;
         font-size: 20px;
 
@@ -470,16 +497,16 @@ body {
         font-size: .9em;
     }
 
-    .content form input {
-        width: 83%;
-        height: 50px;
+    .content form .emailBox {
+        width: 79%;
+        /* height: 50px; */
         background-color: #464747;
 
     }
 
     .content form .button {
         width: 88%;
-        height: 50px;
+        /* height: 50px; */
         border-radius: 30px;
         font-size: 20px;
 
@@ -563,16 +590,16 @@ body {
 
     }
 
-    .content form input {
+    .content form .emailBox {
         width: 50%;
-        height: 60px;
+        /* height: 60px; */
         background-color: #464747;
 
     }
 
     .content form .button {
         width: 30%;
-        height: 60px;
+        /* height: 60px; */
         border-radius: 30px;
         font-size: 25px;
         margin-left: 10px;
@@ -967,22 +994,32 @@ body {
     /* border: 1px solid white; */
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
      justify-content: center;
 align-items: center; 
 margin-top: 60px;
+gap: 20px;
+}
+#form p{
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
 }
 .form1{
+    /* border: 1px solid blue; */
     width: 80%;
-    /* border: 1px solid green; */
-    text-align: center;
+    justify-content: center;
+}
+.form1 .emailBox{
+    width: 50%;
+    max-width: 700px;
 }
 .form1 #mail{
     width: 500px;
-    height: 60px;
 }
 .form1 .button{
     width: 200px;
-    height: 63px;
+    /* height: 63px; */
     /* border-radius: ; */
 
 }
@@ -991,7 +1028,37 @@ margin-top: 60px;
     font-family: sans-serif;
     margin-bottom: 15px;
 }
-@media screen and (max-width:700px) {
+#mail:focus{
+border: none;
+}
+@media screen and (max-width:400px){
+    #form{
+        width: 90vw ;
+    }
+    .form1{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        gap: 15px;
+    }
+      .form1 .emailBox{
+        width:  86%;
+        max-width: 92%;
+        /* height: 45px; */
+      }  
+      .form1 .button{
+        width: 100%;
+        /* height: 47px; */
+        font-size: 18px;
+      }
+      .form1 p{
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+    }
+
+@media screen and (min-width:401px) and (max-width:700px) {
 #form{
     width: 90vw ;
 }
@@ -1002,13 +1069,14 @@ margin-top: 60px;
     text-align: start;
     gap: 15px;
 }
-  .form1 #mail{
-    width: 94.5%;
-    height: 45px;
+  .form1 .emailBox{
+    width:  90%;
+    max-width: 92%;
+    /* height: 45px; */
   }  
   .form1 .button{
     width: 100%;
-    height: 47px;
+    /* height: 47px; */
     font-size: 18px;
   }
   .form1 p{
@@ -1030,6 +1098,9 @@ margin-top: 60px;
      .form1 .button{
         width: 180px;
      }  
+     #mail:focus{
+border: none;
+     }
 }
 @media screen and (min-width:811px) and (max-width:960px){
  #form{
@@ -1061,3 +1132,97 @@ margin-top: 60px;
        width: 180px;
     }
    }
+   .footer{
+    width: 79vw;
+    /* border: 1px solid white; */
+    margin: 0 auto;
+    padding: 60px 0;
+    
+    display: flex;
+    flex-direction: column;
+    color: #5c5a5c;
+    gap: 50px;
+   }
+   .contact a{
+    color: #c5c3c5;
+    font-size: 16px;
+    font-family: sans-serif;
+   }
+   .links{
+    width: 92%;
+    /* border: 1px solid yellow; */
+  
+   }
+   .links ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+gap: 16px;   
+}
+   .links ul li{
+    list-style: none; 
+  }
+  ul li a{
+    font-size: 16px;
+    font-family: sans-serif;
+    color:#B6B5B5;
+  }
+  select{
+    width: 120px;
+    height: 35px;
+    font-size: 18px;
+    display: flex;
+    padding: 5px ;
+    justify-content: center;
+    border: 1px solid #B6B5B5;
+    background:transparent;
+    color: white;
+    font-weight: bold;
+  }
+  .footer p{
+    font-size: 18px;
+    color: #B6B5B5;
+    font-family: sans-serif;
+  }
+  @media screen and (max-width:400px){
+    .footer{
+        width: 90vw;
+    }
+    .links{
+        width: 100%;
+    }
+    ul li a{
+        font-size: 12px;
+    }
+    .footer p{
+        font-size: 14px;
+    }
+  }
+  
+  @media screen and (min-width:401px) and (max-width:500px) {
+    .footer{
+        width: 90vw;
+    }
+    .links{
+        width: 100%;
+    }
+    ul li a{
+        font-size: 14px;
+    }
+    .footer p{
+        font-size: 16px;
+    }
+  }
+  @media screen and (min-width:501px) and (max-width:960px) {
+    .footer{
+        width: 90vw;
+    }
+    .links{
+        width: 90%;
+    }
+    ul li a{
+        font-size: 14px;
+    }
+    .footer p{
+        font-size: 16px;
+    }
+  }
